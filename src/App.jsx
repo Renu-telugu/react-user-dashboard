@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { UserProvider } from './context/UserContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
 import UserDetails from './pages/UserDetails';
 import CreateUser from './pages/CreateUser';
@@ -15,7 +16,8 @@ function App() {
           <Navbar />
           <main className="flex-1">
             <Routes>
-              <Route path="/" element={<Dashboard />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/users/:id" element={<UserDetails />} />
               <Route path="/create" element={<CreateUser />} />
               <Route path="*" element={<NotFound />} />

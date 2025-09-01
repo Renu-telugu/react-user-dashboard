@@ -17,6 +17,12 @@ export default function Navbar() {
           
           <div className="flex items-center space-x-2 sm:space-x-4 flex-shrink-0">
             <Link
+              to="/dashboard"
+              className="hidden sm:inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+            >
+              Dashboard
+            </Link>
+            <Link
               to="/create"
               className="btn-primary text-sm sm:text-base px-3 sm:px-4 py-2 whitespace-nowrap"
             >
