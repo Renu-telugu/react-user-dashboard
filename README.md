@@ -1,24 +1,21 @@
 # User Dashboard
 
-A modern, responsive React application for managing and viewing user information. Built as a frontend internship assignment for Forty4 Consulting Services.
+A modern and responsive **User Dashboard** built with **React + Vite + TailwindCSS**.  
+This project demonstrates fetching and displaying user data from a public API in a structured and visually appealing way.  
+It is designed to showcase **frontend development skills**, clean UI, and integration with external APIs.
+
+---
 
 ## 🚀 Features
 
-### Core Requirements ✅
-- **Dashboard Page**: Display users in a responsive card layout with search and filter functionality
-- **User Details Page**: Comprehensive user information display with Google Maps integration
-- **Create User Form**: Client-side form to add new users with validation
-- **Global State Management**: Context API with useReducer for efficient state management
-- **Responsive Design**: Mobile-first approach with Tailwind CSS
-- **Routing**: React Router DOM for seamless navigation
+- 📋 **User Listing** – Fetches users dynamically from [JSONPlaceholder](https://jsonplaceholder.typicode.com/users).  
+- 🔍 **User Details Panel** – Displays name, email, phone, and address in a clean layout.  
+- ⬅️➡️ **Navigation Controls** – Quickly move between users with previous/next buttons.  
+- 🎨 **Responsive UI** – Optimized for desktops, tablets, and mobile screens.  
+- 🌙 **Dark Mode** – Supports light and dark themes.  
+- ⚡ **Fast Development Setup** – Powered by Vite for instant hot reloading.  
 
-### Nice-to-Have Features ✅
-- **Search & Filter**: Debounced search by name with real-time filtering
-- **Sorting**: Sort users by name (A-Z / Z-A)
-- **Pagination**: Client-side pagination with 6 users per page
-- **Dark Mode**: Toggle between light and dark themes
-- **Loading States**: Skeleton loaders and error handling
-- **Accessibility**: Semantic HTML, keyboard navigation, focus states
+---
 
 ## 🛠️ Tech Stack
 
@@ -29,43 +26,7 @@ A modern, responsive React application for managing and viewing user information
 - **Tailwind CSS** - Utility-first CSS framework for responsive design
 - **Context API + useReducer** - Global state management (chosen over Redux for simplicity)
 
-## 📁 Project Structure
-
-```
-user-dashboard/
-├── public/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   │   ├── Navbar.jsx
-│   │   ├── SearchBar.jsx
-│   │   ├── UserCard.jsx
-│   │   ├── UserGrid.jsx
-│   │   ├── Loader.jsx
-│   │   ├── ErrorState.jsx
-│   │   ├── EmptyState.jsx
-│   │   ├── Pagination.jsx
-│   │   ├── SortSelect.jsx
-│   │   └── ThemeToggle.jsx
-│   ├── context/
-│   │   └── UserContext.jsx
-│   ├── hooks/
-│   │   └── useDebounce.js
-│   ├── pages/
-│   │   ├── Dashboard.jsx
-│   │   ├── UserDetails.jsx
-│   │   ├── CreateUser.jsx
-│   │   └── NotFound.jsx
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css
-├── index.html
-├── package.json
-├── tailwind.config.js
-├── postcss.config.js
-├── vite.config.js
-└── README.md
-```
+---
 
 ## 🚀 Getting Started
 
@@ -104,16 +65,6 @@ npm run build
 npm run preview
 ```
 
-## 📱 Screenshots
-
-*Screenshots will be added here after deployment*
-
-- `/screenshots/dashboard-light.png` - Dashboard in light mode
-- `/screenshots/dashboard-dark.png` - Dashboard in dark mode
-- `/screenshots/user-details.png` - User details page
-- `/screenshots/create-user.png` - Create user form
-- `/screenshots/mobile-view.png` - Mobile responsive view
-
 ## 🎯 Key Features Explained
 
 ### Global State Management
@@ -137,69 +88,4 @@ npm run preview
 - **Real-time Feedback**: Errors clear as user types
 - **Disabled Submit**: Button disabled until form is valid
 
-## 🔧 Technical Decisions
-
-### Why Context + useReducer over Redux?
-- **Simplicity**: No additional dependencies
-- **Project Size**: Appropriate for this scale
-- **Learning**: Demonstrates modern React patterns
-- **Performance**: Sufficient for this use case
-
-### Why Tailwind CSS?
-- **Rapid Development**: Utility classes speed up development
-- **Consistency**: Built-in design system
-- **Responsive**: Easy responsive design
-- **Dark Mode**: Built-in dark mode support
-
-### API Integration
-- **Data Source**: https://jsonplaceholder.typicode.com/users
-- **Error Handling**: Graceful error states with retry functionality
-- **Loading States**: Skeleton loaders for better UX
-
-## 🧪 Testing Considerations
-
-The app handles various edge cases:
-- **Network Errors**: Retry functionality with user-friendly messages
-- **Empty States**: Proper messaging when no users found
-- **Invalid Routes**: 404 page for unknown URLs
-- **Form Validation**: Comprehensive client-side validation
-- **Missing Data**: Graceful handling of optional user fields
-
-## 📝 Notes for Reviewers
-
-### Code Quality
-- **Modular Components**: Small, reusable components
-- **Custom Hooks**: useDebounce for search optimization
-- **Semantic HTML**: Proper accessibility markup
-- **Comments**: Key sections documented
-
-### Performance
-- **Debounced Search**: Prevents excessive filtering
-- **Memoization**: useMemo for expensive operations
-- **Lazy Loading**: Could be added for larger datasets
-- **Bundle Size**: Minimal dependencies
-
-### Accessibility
-- **Keyboard Navigation**: All interactive elements accessible
-- **Screen Readers**: Proper ARIA labels and semantic HTML
-- **Focus Management**: Visible focus indicators
-- **Color Contrast**: Meets WCAG guidelines
-
-### Future Enhancements
-- **Local Storage**: Persist user preferences
-- **Advanced Filtering**: Filter by company, location
-- **Export Functionality**: Export user data
-- **Real-time Updates**: WebSocket integration
-- **Unit Tests**: Jest and React Testing Library
-
-## 📄 License
-
-This project is created for the Forty4 Consulting Services internship assignment.
-
-## 🤝 Contributing
-
-This is an assignment project, but feedback and suggestions are welcome!
-
 ---
-
-**Built with ❤️ for Forty4 Consulting Services**
