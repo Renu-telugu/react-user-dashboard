@@ -38,7 +38,7 @@ export default function Dashboard() {
           Users
         </h1>
         <p className="text-gray-600 dark:text-gray-400">
-          {users.length} user{users.length !== 1 ? 's' : ''} found
+          {users.length} user{users.length !== 1 ? 's' : ''} found • Showing 6 per page
         </p>
       </div>
 

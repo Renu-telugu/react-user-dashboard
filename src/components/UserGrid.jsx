@@ -52,6 +52,10 @@ export default function UserGrid({ users }) {
     setCurrentPage(1);
   };
 
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
   return (
     <div className="space-y-6">
       {/* Search and Sort Controls */}
@@ -73,7 +77,7 @@ export default function UserGrid({ users }) {
       <Pagination
         currentPage={currentPage}
         totalPages={totalPages}
-        onPageChange={setCurrentPage}
+        onPageChange={handlePageChange}
       />
     </div>
   );
