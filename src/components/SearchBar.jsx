@@ -21,7 +21,7 @@ export default function SearchBar({ onSearch }) {
         type="text"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        placeholder="Search users by name..."
+        placeholder="Search users by name (starts with)..."
         className="input-field pl-10"
         aria-label="Search users"
       />

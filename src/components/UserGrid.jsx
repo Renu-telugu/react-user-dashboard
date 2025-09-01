@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import UserCard from './UserCard';
 import SearchBar from './SearchBar';
 import SortSelect from './SortSelect';
@@ -14,10 +14,10 @@ export default function UserGrid({ users }) {
   const filteredAndSortedUsers = useMemo(() => {
     let filtered = users;
     
-    // Filter by search term
+    // Filter by search term - only show users whose names START with the search term
     if (searchTerm) {
       filtered = users.filter(user =>
-        user.name.toLowerCase().includes(searchTerm.toLowerCase())
+        user.name.toLowerCase().startsWith(searchTerm.toLowerCase())
       );
     }
     
@@ -53,8 +53,18 @@ export default function UserGrid({ users }) {
   };
 
   const handlePageChange = (page) => {
-    setCurrentPage(page);
+    // Validate page is within valid range
+    if (page >= 1 && page <= totalPages) {
+      setCurrentPage(page);
+    }
   };
+
+  // Reset to page 1 if current page is beyond total pages
+  useEffect(() => {
+    if (currentPage > totalPages && totalPages > 0) {
+      setCurrentPage(1);
+    }
+  }, [currentPage, totalPages]);
 
   return (
     <div className="space-y-6">
