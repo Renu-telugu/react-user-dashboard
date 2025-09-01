@@ -29,8 +29,7 @@ It is designed to showcase **frontend development skills**, clean UI, and integr
 ---
 
 ## 🎥 Demo
-- [User Dashboard Demo](/src/images/demo.gif)
-- [Watch Video Recording](https://drive.google.com/file/d/1ZfCE0gqCsMDVzvKM34Vv0ixlGNiDi9ss/view?usp=sharing)  
+- [User Dashboard Demo](https://drive.google.com/file/d/1ZfCE0gqCsMDVzvKM34Vv0ixlGNiDi9ss/view?usp=sharing)  
 
 ---
 
