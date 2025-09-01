@@ -33,6 +33,25 @@ It is designed to showcase **frontend development skills**, clean UI, and integr
 
 ---
 
+## 📸 Screenshots  
+
+### 🏠 Homepage  
+<p align="center">
+  <img src="src/images/ss1.jpg" alt="Homepage" width="600"/>
+</p>
+
+### 📊 Dashboard  
+<p align="center">
+  <img src="src/images/ss2.jpg" alt="Dashboard" width="600"/>
+</p>
+
+### ➕ Create New User  
+<p align="center">
+  <img src="src/images/ss3.jpg" alt="Create User" width="600"/>
+</p>
+
+---
+
 ## 🚀 Getting Started
 
 ### Prerequisites
