@@ -33,12 +33,13 @@ export default function Dashboard() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+      <div className="mb-6">
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2 flex items-center">
+          <i className="fas fa-users mr-3 text-blue-600 dark:text-blue-400"></i>
           Users
         </h1>
         <p className="text-gray-600 dark:text-gray-400">
-          {users.length} user{users.length !== 1 ? 's' : ''} found • Showing 6 per page
+          {users.length} user{users.length !== 1 ? 's' : ''} found
         </p>
       </div>
 

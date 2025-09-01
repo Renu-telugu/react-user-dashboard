@@ -56,10 +56,7 @@ export default function UserGrid({ users }) {
   const handlePageChange = (page) => {
     // Validate page is within valid range
     if (page >= 1 && page <= totalPages) {
-      console.log(`Changing page from ${currentPage} to ${page}, totalPages: ${totalPages}`);
       setCurrentPage(page);
-    } else {
-      console.log(`Invalid page change: ${page}, currentPage: ${currentPage}, totalPages: ${totalPages}`);
     }
   };
 
@@ -82,8 +79,14 @@ export default function UserGrid({ users }) {
 
       {/* User Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {paginatedUsers.map(user => (
-          <UserCard key={user.id} user={user} />
+        {paginatedUsers.map((user, index) => (
+          <div 
+            key={user.id} 
+            className="animate-fade-in-up"
+            style={{ animationDelay: `${index * 100}ms` }}
+          >
+            <UserCard user={user} />
+          </div>
         ))}
       </div>
 

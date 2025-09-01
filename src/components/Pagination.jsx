@@ -17,14 +17,14 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
   }
 
   return (
-    <div className="flex items-center justify-center space-x-2 mt-8">
+    <div className="flex items-center justify-center space-x-3 mt-6 p-3 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-700">
       <button
         onClick={() => {
-          const prevPage = Math.max(1, currentPage - 1);
-          if (prevPage !== currentPage) onPageChange(prevPage);
+          // Circular pagination: go to last page when on page 1
+          const prevPage = currentPage === 1 ? totalPages : currentPage - 1;
+          onPageChange(prevPage);
         }}
-        disabled={currentPage === 1}
-        className="px-3 py-2 text-sm font-medium text-gray-500 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
+        className="px-3 py-2 text-sm font-medium text-gray-500 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
       >
         Previous
       </button>
@@ -47,10 +47,10 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
         <button
           key={page}
           onClick={() => onPageChange(page)}
-          className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
+          className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
             currentPage === page
-              ? 'bg-blue-600 text-white'
-              : 'text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700'
+              ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/25 scale-105'
+              : 'text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 hover:shadow-md hover:-translate-y-0.5'
           }`}
         >
           {page}
@@ -73,11 +73,11 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
       
       <button
         onClick={() => {
-          const nextPage = Math.min(totalPages, currentPage + 1);
-          if (nextPage !== currentPage) onPageChange(nextPage);
+          // Circular pagination: roll back to page 1 after last page
+          const nextPage = currentPage === totalPages ? 1 : currentPage + 1;
+          onPageChange(nextPage);
         }}
-        disabled={currentPage === totalPages}
-        className="px-3 py-2 text-sm font-medium text-gray-500 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
+        className="px-3 py-2 text-sm font-medium text-gray-500 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
       >
         Next
       </button>
