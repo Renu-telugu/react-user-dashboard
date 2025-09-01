@@ -8,7 +8,7 @@ export default function SearchBar({ onSearch }) {
   // Trigger search when debounced value changes
   useEffect(() => {
     onSearch(debouncedSearchTerm);
-  }, [debouncedSearchTerm, onSearch]);
+  }, [debouncedSearchTerm]); // Removed onSearch from dependencies to prevent infinite re-renders
 
   return (
     <div className="relative">

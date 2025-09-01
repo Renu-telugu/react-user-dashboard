@@ -8,21 +8,22 @@ export default function UserGrid({ users }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('name-asc');
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 6;
+  const itemsPerPage = 6; // Change this to filteredAndSortedUsers.length to show all users on one page
 
-  // Filter and sort users
+  // Filter and sort users - FIXED: Create copies to avoid mutating original array
   const filteredAndSortedUsers = useMemo(() => {
-    let filtered = users;
+    // Create a copy of users array first
+    let filtered = [...users];
     
     // Filter by search term - only show users whose names START with the search term
     if (searchTerm) {
-      filtered = users.filter(user =>
+      filtered = filtered.filter(user =>
         user.name.toLowerCase().startsWith(searchTerm.toLowerCase())
       );
     }
     
-    // Sort users
-    filtered.sort((a, b) => {
+    // Sort users - create a new sorted array instead of mutating
+    const sorted = [...filtered].sort((a, b) => {
       const nameA = a.name.toLowerCase();
       const nameB = b.name.toLowerCase();
       
@@ -33,7 +34,7 @@ export default function UserGrid({ users }) {
       }
     });
     
-    return filtered;
+    return sorted;
   }, [users, searchTerm, sortBy]);
 
   // Paginate users
@@ -55,16 +56,19 @@ export default function UserGrid({ users }) {
   const handlePageChange = (page) => {
     // Validate page is within valid range
     if (page >= 1 && page <= totalPages) {
+      console.log(`Changing page from ${currentPage} to ${page}, totalPages: ${totalPages}`);
       setCurrentPage(page);
+    } else {
+      console.log(`Invalid page change: ${page}, currentPage: ${currentPage}, totalPages: ${totalPages}`);
     }
   };
 
-  // Reset to page 1 if current page is beyond total pages
+  // Reset to page 1 if current page is beyond total pages - FIXED: Only reset when totalPages changes, not currentPage
   useEffect(() => {
     if (currentPage > totalPages && totalPages > 0) {
       setCurrentPage(1);
     }
-  }, [currentPage, totalPages]);
+  }, [totalPages]); // Removed currentPage from dependencies to prevent reset loop
 
   return (
     <div className="space-y-6">
