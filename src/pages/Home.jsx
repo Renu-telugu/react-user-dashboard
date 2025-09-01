@@ -60,79 +60,79 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Feature 1 */}
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-700 dark:to-gray-600 p-8 rounded-2xl border border-blue-100 dark:border-gray-600 hover:shadow-lg hover:scale-105 transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-              <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mb-6">
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-700 dark:to-gray-600 p-8 rounded-2xl border border-blue-100 dark:border-gray-600 hover:shadow-xl hover:scale-105 hover:border-blue-300 dark:hover:border-blue-500 transition-all duration-300 animate-fade-in-up group cursor-pointer" style={{ animationDelay: '0.1s' }}>
+              <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                 <i className="fas fa-search text-white text-xl"></i>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                 Smart Search
               </h3>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-gray-600 dark:text-gray-300 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
                 Find users instantly with our intelligent search functionality that filters by name with real-time results.
               </p>
             </div>
 
             {/* Feature 2 */}
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-gray-700 dark:to-gray-600 p-8 rounded-2xl border border-green-100 dark:border-gray-600 hover:shadow-lg hover:scale-105 transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center mb-6">
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-gray-700 dark:to-gray-600 p-8 rounded-2xl border border-green-100 dark:border-gray-600 hover:shadow-xl hover:scale-105 hover:border-green-300 dark:hover:border-green-500 transition-all duration-300 animate-fade-in-up group cursor-pointer" style={{ animationDelay: '0.2s' }}>
+              <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                 <i className="fas fa-sort text-white text-xl"></i>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors duration-300">
                 Advanced Sorting
               </h3>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-gray-600 dark:text-gray-300 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
                 Sort users alphabetically in ascending or descending order for better organization and management.
               </p>
             </div>
 
             {/* Feature 3 */}
-            <div className="bg-gradient-to-br from-purple-50 to-violet-50 dark:from-gray-700 dark:to-gray-600 p-8 rounded-2xl border border-purple-100 dark:border-gray-600 hover:shadow-lg hover:scale-105 transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-              <div className="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center mb-6">
+            <div className="bg-gradient-to-br from-purple-50 to-violet-50 dark:from-gray-700 dark:to-gray-600 p-8 rounded-2xl border border-purple-100 dark:border-gray-600 hover:shadow-xl hover:scale-105 hover:border-purple-300 dark:hover:border-purple-500 transition-all duration-300 animate-fade-in-up group cursor-pointer" style={{ animationDelay: '0.3s' }}>
+              <div className="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                 <i className="fas fa-mobile-alt text-white text-xl"></i>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">
                 Responsive Design
               </h3>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-gray-600 dark:text-gray-300 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
                 Fully responsive design that works perfectly on mobile, tablet, and desktop devices.
               </p>
             </div>
 
             {/* Feature 4 */}
-            <div className="bg-gradient-to-br from-orange-50 to-red-50 dark:from-gray-700 dark:to-gray-600 p-8 rounded-2xl border border-orange-100 dark:border-gray-600 hover:shadow-lg hover:scale-105 transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-              <div className="w-12 h-12 bg-orange-600 rounded-xl flex items-center justify-center mb-6">
+            <div className="bg-gradient-to-br from-orange-50 to-red-50 dark:from-gray-700 dark:to-gray-600 p-8 rounded-2xl border border-orange-100 dark:border-gray-600 hover:shadow-xl hover:scale-105 hover:border-orange-300 dark:hover:border-orange-500 transition-all duration-300 animate-fade-in-up group cursor-pointer" style={{ animationDelay: '0.4s' }}>
+              <div className="w-12 h-12 bg-orange-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                 <i className="fas fa-palette text-white text-xl"></i>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300">
                 Dark Mode
               </h3>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-gray-600 dark:text-gray-300 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
                 Toggle between light and dark themes for comfortable viewing in any environment.
               </p>
             </div>
 
             {/* Feature 5 */}
-            <div className="bg-gradient-to-br from-teal-50 to-cyan-50 dark:from-gray-700 dark:to-gray-600 p-8 rounded-2xl border border-teal-100 dark:border-gray-600 hover:shadow-lg hover:scale-105 transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
-              <div className="w-12 h-12 bg-teal-600 rounded-xl flex items-center justify-center mb-6">
+            <div className="bg-gradient-to-br from-teal-50 to-cyan-50 dark:from-gray-700 dark:to-gray-600 p-8 rounded-2xl border border-teal-100 dark:border-gray-600 hover:shadow-xl hover:scale-105 hover:border-teal-300 dark:hover:border-teal-500 transition-all duration-300 animate-fade-in-up group cursor-pointer" style={{ animationDelay: '0.5s' }}>
+              <div className="w-12 h-12 bg-teal-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                 <i className="fas fa-pagination text-white text-xl"></i>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-300">
                 Smart Pagination
               </h3>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-gray-600 dark:text-gray-300 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
                 Navigate through users with our circular pagination system that never gets stuck.
               </p>
             </div>
 
             {/* Feature 6 */}
-            <div className="bg-gradient-to-br from-pink-50 to-rose-50 dark:from-gray-700 dark:to-gray-600 p-8 rounded-2xl border border-pink-100 dark:border-gray-600 hover:shadow-lg hover:scale-105 transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-              <div className="w-12 h-12 bg-pink-600 rounded-xl flex items-center justify-center mb-6">
+            <div className="bg-gradient-to-br from-pink-50 to-rose-50 dark:from-gray-700 dark:to-gray-600 p-8 rounded-2xl border border-pink-100 dark:border-gray-600 hover:shadow-xl hover:scale-105 hover:border-pink-300 dark:hover:border-pink-500 transition-all duration-300 animate-fade-in-up group cursor-pointer" style={{ animationDelay: '0.6s' }}>
+              <div className="w-12 h-12 bg-pink-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                 <i className="fas fa-bolt text-white text-xl"></i>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors duration-300">
                 Lightning Fast
               </h3>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-gray-600 dark:text-gray-300 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
                 Built with Vite for instant hot reloads and optimized performance for the best user experience.
               </p>
             </div>

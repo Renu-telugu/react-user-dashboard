@@ -29,22 +29,22 @@ export default function SortSelect({ value, onChange }) {
 
   return (
     <div className="relative" ref={dropdownRef}>
-      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+      <label className="block text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 sm:mb-2">
         Sort by
       </label>
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="relative w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-xl shadow-sm px-4 py-3 text-left cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:border-gray-400 dark:hover:border-gray-500 hover:shadow-md transition-all duration-200"
+        className="relative w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg sm:rounded-xl shadow-sm px-3 sm:px-4 py-2 sm:py-3 text-left cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:border-gray-400 dark:hover:border-gray-500 hover:shadow-md transition-all duration-200 min-w-0"
       >
         <span className="flex items-center justify-between">
           <span className="flex items-center">
-            <span className="text-gray-900 dark:text-gray-100 font-medium">
+            <span className="text-gray-900 dark:text-gray-100 font-medium text-sm sm:text-base">
               {selectedOption?.label}
             </span>
           </span>
           <svg
-            className={`ml-2 h-5 w-5 text-gray-400 transition-transform duration-200 ${
+            className={`ml-2 h-4 w-4 sm:h-5 sm:w-5 text-gray-400 transition-transform duration-200 ${
               isOpen ? 'rotate-180' : ''
             }`}
             fill="none"
@@ -57,18 +57,18 @@ export default function SortSelect({ value, onChange }) {
       </button>
 
       {isOpen && (
-        <div className="absolute z-10 mt-2 w-full bg-white dark:bg-gray-700 shadow-xl border border-gray-200 dark:border-gray-600 rounded-xl py-2 overflow-hidden">
+        <div className="absolute z-10 mt-1 sm:mt-2 w-full bg-white dark:bg-gray-700 shadow-xl border border-gray-200 dark:border-gray-600 rounded-lg sm:rounded-xl py-1 sm:py-2 overflow-hidden">
           {options.map((option) => (
             <button
               key={option.value}
               onClick={() => handleSelect(option.value)}
-              className={`w-full px-4 py-3 text-left hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors duration-150 flex items-center justify-between ${
+              className={`w-full px-3 sm:px-4 py-2 sm:py-3 text-left hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors duration-150 flex items-center justify-between ${
                 value === option.value
                   ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 border-r-2 border-blue-500'
                   : 'text-gray-900 dark:text-gray-100'
               }`}
             >
-              <span className="font-medium">{option.label}</span>
+              <span className="font-medium text-sm sm:text-base">{option.label}</span>
               {value === option.value && (
                 <svg className="h-4 w-4 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />

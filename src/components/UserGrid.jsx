@@ -68,19 +68,19 @@ export default function UserGrid({ users }) {
   }, [totalPages]); // Removed currentPage from dependencies to prevent reset loop
 
   return (
-    <div className="space-y-4 sm:space-y-6">
+    <div className="space-y-3 sm:space-y-4 lg:space-y-6">
       {/* Search and Sort Controls */}
-      <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-between items-start sm:items-center">
-        <div className="w-full sm:w-80">
+      <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-3 sm:gap-4">
+        <div className="w-full md:w-auto md:max-w-md">
           <SearchBar onSearch={handleSearch} />
         </div>
-        <div className="w-full sm:w-auto">
+        <div className="w-full md:w-auto md:max-w-48">
           <SortSelect value={sortBy} onChange={handleSort} />
         </div>
       </div>
 
       {/* User Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
         {paginatedUsers.map((user, index) => (
           <div 
             key={user.id} 
